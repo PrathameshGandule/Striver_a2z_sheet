@@ -1,3 +1,5 @@
+//This solution is using simple array logic 
+
 class Solution
 {
 public:
@@ -8,5 +10,19 @@ public:
             if(maxval < arr[i])
                 maxval = arr[i];
         return maxval;
+    }
+};
+
+//Following solution is by using vector's auto iterator
+
+class Solution
+{
+public:
+    int largest(vector<int> &arr, int n)
+    {
+        int largest = arr[0];
+        for(auto i : arr)
+            largest = max(i, largest);
+        return largest;
     }
 };
