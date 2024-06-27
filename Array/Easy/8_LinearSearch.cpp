@@ -1,24 +1,18 @@
-class Solution {
-public:
-    void swap(int &p, int &q){
-        int t=p;
-        p=q;
-        q=t;
-    }
-    void moveZeroes(vector<int>& nums) {
-        int i=0,j=0;
-        int n=nums.size();
-        for(i=0 ; i<n ; i++){
-            if(nums[i]==0){
-                j=i;
-                break;
-            }
-        }
-        for(i=j+1 ; i<n ; i++){
-            if(nums[i]!=0 && nums[j]==0){
-                swap(nums[i], nums[j]);
-                j++;
-            }
-        }
+class Solution{
+    public:
+    // Function to find element in sorted array
+    // arr: input array
+    // N: size of array
+    // K: element to be searche
+    int searchInSorted(int arr[], int N, int K) 
+    { 
+       // Your code here
+       for(int i=0 ; i<N ; i++){
+           if(arr[i]==K){
+            return 1;
+            break;
+           }
+       }
+       return -1;
     }
 };
