@@ -1,3 +1,5 @@
+//Linear search
+
 class Solution{
     public:
     // Function to find element in sorted array
@@ -7,7 +9,7 @@ class Solution{
     int searchInSorted(int arr[], int N, int K) 
     { 
        // Your code here
-       for(int i=0 ; i<N ; i++){
+       for(int i=0 ; i<N ; i++){      //simple linear search
            if(arr[i]==K){
             return 1;
             break;
